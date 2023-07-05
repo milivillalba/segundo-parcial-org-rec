@@ -13,7 +13,7 @@ const app = express();
 require("ejs");
 
 // Se importa la instancia de conexión a la base de datos - (debe ser después de leer las variables de entorno)
-const { sequelize } = require("./database");
+const { sequelize } = require("./database.js");
 
 // Conexión a base de datos
 sequelize
