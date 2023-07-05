@@ -1,8 +1,8 @@
 // TODO: Crear modelo de datos de Reserva
-const { DataTypes, sequelize } = require("../database.js");
+const { DataTypes, sequelize } = require("../database");
 
 const Reserva = sequelize.define(
-  "reserva",
+  "reservas",
   {
     // Model attributes are defined here
     id: {
@@ -46,6 +46,10 @@ const Reserva = sequelize.define(
     },
     telefono_pasajero: {
       type: DataTypes.STRING(50),
+      allowNull: false,
+    },
+    costo_vuelo: {
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     estado: {
